@@ -8,7 +8,7 @@ export default defineConfig(() => {
 		server: {
 			port: 3000,
 		},
-		base: "https://trevorcfarr.github.io/n-robitaille",
+		base: ".",
 		resolve: {
 			alias: {
 				app: resolve(__dirname, "src", "app"),
