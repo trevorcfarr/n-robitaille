@@ -30,14 +30,13 @@ function HomeItem({
 
 	return (
 		<motion.div
-			initial={{ opacity: 0, y: 20 }}
-			whileInView={{ opacity: 1, y: 0 }}
-			viewport={{ once: true }}
-			transition={{
-				ease: cubicBezier(0.25, 0.1, 0.25, 1),
-				duration: 0.7,
-				delay: 0.4,
+			initial={{ opacity: 0, x: isEven ? 90 : -90 }}
+			whileInView={{
+				opacity: 1,
+				x: 0,
+				transition: { duration: 1, delay: 0.2 },
 			}}
+			viewport={{ once: true }}
 			className={`flex flex-col ${
 				isEven ? "md:flex-row" : "md:flex-row-reverse"
 			} justify-center gap-12 items-center`}
@@ -53,7 +52,6 @@ function HomeItem({
 				>
 					{title}
 				</div>
-				{/* <div className="w-full bg-black"></div> */}
 				<hr className="bg-black text-black"></hr>
 				<div className="flex flex-col">
 					<div
